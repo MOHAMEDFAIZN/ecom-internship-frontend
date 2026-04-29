@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: #1e1e1e;
+        color: #fff;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: #000;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .nav-left a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .nav-right input {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: none;
+        width: 200px;
+      }
+
+      /* Main container */
+      .container {
+        max-width: 1300px;
+        margin: 40px auto;
+        padding: 40px;
+        background: linear-gradient(145deg, #2a2a2a, #1c1c1c);
+        border-radius: 14px;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 60px;
+      }
+
+      /* Image */
+      .product-image {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .product-image img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      /* Product info */
+      .category {
+        color: #4da3ff;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+
+      .top-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .date {
+        font-size: 14px;
+        color: #ccc;
+      }
+
+      h1 {
+        margin: 15px 0 5px;
+        font-size: 40px;
+        font-weight: 500;
+      }
+
+      .brand {
+        font-style: italic;
+        color: #bbb;
+        margin-bottom: 25px;
+      }
+
+      .desc-title {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .description {
+        color: #ddd;
+        margin-bottom: 20px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #555;
+        margin: 20px 0;
+      }
+
+      .price {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        padding: 14px 26px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn-cart {
+        background: #0d6efd;
+        color: #fff;
+        margin-bottom: 25px;
+      }
+
+      .btn-cart:hover {
+        background: #0b5ed7;
+      }
+
+      .stock {
+        margin-bottom: 25px;
+        color: #ccc;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 20px;
+      }
+
+      .btn-update {
+        background: #0d6efd;
+        color: #fff;
+      }
+
+      .btn-delete {
+        background: #dc3545;
+        color: #fff;
+      }
+
+      .btn-update:hover {
+        background: #0b5ed7;
+      }
+
+      .btn-delete:hover {
+        background: #bb2d3b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="nav-left">
+        <div class="logo">E-COM</div>
+        <a href="index.html">Home</a>
+        <a href="add-product.html">Add Product</a>
+        <a href="#">Categories <i class="fa fa-caret-down"></i></a>
+      </div>
+
+      <div class="nav-right">
+        <i class="fa-solid fa-moon"></i>
+        <span><i class="fa-solid fa-cart-shopping"></i> Cart</span>
+        <input type="text" placeholder="Search" />
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="container">
+      <div class="product-grid">
+        <!-- Image -->
+        <div class="product-image">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-s928bzkeinu/gallery/in-galaxy-s24-ultra-492657-sm-s928bzkeinu-540932020?$650_519_PNG$"
+          />
+        </div>
+
+        <!-- Info -->
+        <div>
+          <div class="top-info">
+            <div class="category">MOBILE</div>
+            <div class="date">Listed : 3/6/2025</div>
+          </div>
+
+          <h1>Samsung Galaxy S24 Ultra</h1>
+          <div class="brand">Samsung</div>
+
+          <div class="desc-title">PRODUCT DESCRIPTION :</div>
+          <div class="description">the best smartphone in the world now</div>
+
+          <hr />
+
+          <div class="price">$9999</div>
+
+          <button class="btn btn-cart">Add to cart</button>
+
+          <div class="stock">Stock Available : 6</div>
+
+          <div class="action-buttons">
+            <button class="btn btn-update">Update</button>
+            <button class="btn btn-delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".btn-delete").addEventListener("click", () => {
+        if (confirm("Are you sure you want to delete this product?")) {
+          alert("Product deleted!");
+        }
+      });
+
+      document.querySelector(".btn-update").addEventListener("click", () => {
+        alert("Redirect to Update Product page");
+      });
+    </script>
+  </body>
+</html>

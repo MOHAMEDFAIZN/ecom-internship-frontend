@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-COM | Add Product</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #ffffff;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 40px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 25px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .nav-right input {
+        padding: 7px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+      }
+
+      /* ===== FORM CONTAINER ===== */
+      .container {
+        max-width: 950px;
+        margin: 40px auto;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 22px;
+      }
+
+      .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group label {
+        margin-bottom: 6px;
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 10px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      textarea {
+        resize: none;
+        height: 70px;
+      }
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 15px 0 25px;
+      }
+
+      button {
+        background: #0d6efd;
+        color: #fff;
+        border: none;
+        padding: 10px 28px;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #0b5ed7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <div class="navbar">
+      <div class="logo">E-COM</div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="add-product.html">Add Product</a>
+        <a href="#">Categories ▾</a>
+      </div>
+
+      <div class="nav-right">
+        <span>☀️</span>
+        <span>🛒 Cart</span>
+        <input type="text" placeholder="Search" />
+      </div>
+    </div>
+
+    <!-- ===== FORM ===== -->
+    <div class="container">
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Product Name" />
+          </div>
+
+          <div class="form-group">
+            <label>Brand</label>
+            <input type="text" placeholder="Enter your Brand" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea placeholder="Add product description"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price</label>
+            <input type="number" placeholder="Eg: $1000" />
+          </div>
+
+          <div class="form-group">
+            <label>Category</label>
+            <select>
+              <option>Select category</option>
+              <option>Electronics</option>
+              <option>Fashion</option>
+              <option>Books</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Stock Quantity</label>
+            <input type="number" placeholder="Stock Remaining" />
+          </div>
+
+          <div class="form-group">
+            <label>Release Date</label>
+            <input type="date" />
+          </div>
+
+          <div class="form-group">
+            <label>Image</label>
+            <input type="file" />
+          </div>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" />
+          <label>Product Available</label>
+        </div>
+
+        <button type="button" onclick="submitcart()">Submit</button>
+      </form>
+    </div>
+    <script>
+      function submitcart() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
